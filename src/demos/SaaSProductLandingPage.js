@@ -7,8 +7,10 @@ import Features from "components/features/ThreeColWithSideImage.js";
 import MainFeature from "components/features/TwoColWithButton.js";
 import MainFeature2 from "components/features/TwoColWithTwoHorizontalFeaturesAndButton.js";
 import FeatureWithSteps from "components/features/TwoColWithSteps.js";
-import Pricing from "components/pricing/ThreePlans.js";
-import Testimonial from "components/testimonials/TwoColumnWithImageAndRating.js";
+// import Pricing from "components/pricing/ThreePlans.js";
+// import Testimonial from "components/testimonials/TwoColumnWithImageAndRating.js";
+import ContactUsForm from "components/forms/TwoColContactUsWithIllustration.js";
+import SimpleContactUsForm from "components/forms/SimpleContactUs.js";
 import FAQ from "components/faqs/SingleCol.js";
 import GetStarted from "components/cta/GetStarted";
 import Footer from "components/footers/FiveColumnWithBackground.js";
@@ -26,18 +28,20 @@ export default () => {
     <AnimationRevealPage>
       <Hero roundedHeaderButton={true} />
       <Features
-        subheading={<Subheading>Features</Subheading>}
+        subheading={<Subheading>Our Features</Subheading>}
         heading={
           <>
-            We have Amazing <HighlightedText>Service.</HighlightedText>
+            Get high-quality project assistance <HighlightedText>today.</HighlightedText>
           </>
         }
+        description="Entrust your coding tasks to our credible service!"
       />
       <MainFeature
         subheading={<Subheading>Quality Work</Subheading>}
         imageSrc={heroScreenshotImageSrc}
         imageBorder={true}
         imageDecoratorBlob={true}
+        id="about"
       />
       <FeatureWithSteps
         subheading={<Subheading>STEPS</Subheading>}
@@ -50,8 +54,10 @@ export default () => {
         imageSrc={macHeroScreenshotImageSrc}
         imageDecoratorBlob={true}
         decoratorBlobCss={tw`xl:w-40 xl:h-40 opacity-15 -translate-x-1/2 left-1/2`}
+        id="steps"
       />
       <MainFeature2
+        id="values"
         subheading={<Subheading>VALUES</Subheading>}
         heading={
           <>
@@ -70,12 +76,12 @@ export default () => {
           {
             Icon: BriefcaseIcon,
             title: "Professionalism",
-            description: "We assure you that our templates are designed and created by professional designers.",
+            description: "We assure you that our projects are designed and developed by professional developers.",
             iconContainerCss: tw`bg-red-300 text-red-800`
           }
         ]}
       />
-      <Pricing
+      {/* <Pricing
         subheading={<Subheading>Pricing</Subheading>}
         heading={
           <>
@@ -106,8 +112,8 @@ export default () => {
             features: ["90 Templates", "27 Landing Pages", "37 Internal Pages", "Personal Assistance"]
           }
         ]}
-      />
-      <Testimonial
+      /> */}
+      {/* <Testimonial
         subheading={<Subheading>Testimonials</Subheading>}
         heading={
           <>
@@ -136,8 +142,10 @@ export default () => {
             customerTitle: "Founder, EventsNYC"
           }
         ]}
-      />
-      <FAQ
+      /> */}
+
+      <SimpleContactUsForm id="contactus" />
+      {/* <FAQ
         subheading={<Subheading>FAQS</Subheading>}
         heading={
           <>
@@ -177,7 +185,7 @@ export default () => {
           }
         ]}
       />
-      <GetStarted/>
+      <GetStarted/> */}
       <Footer />
     </AnimationRevealPage>
   );

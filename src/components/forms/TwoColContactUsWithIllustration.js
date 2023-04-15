@@ -8,8 +8,9 @@ import EmailIllustrationSrc from "images/email-illustration.svg";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
-const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
-const ImageColumn = tw(Column)`md:w-5/12 flex-shrink-0 h-80 md:h-auto`;
+const Column = tw.div`w-full h-full max-w-md mx-auto md:max-w-none md:mx-0`;
+const ImageColumn = tw(Column)`md:w-full  flex-shrink-0 h-80 md:h-full`;
+const TextArea = tw.textarea`h-24 sm:h-full resize-none`;
 const TextColumn = styled(Column)(props => [
   tw`md:w-7/12 mt-16 md:mt-0`,
   props.textOnLeft ? tw`md:mr-12 lg:mr-16 md:order-first` : tw`md:ml-12 lg:ml-16 md:order-last`
@@ -52,8 +53,15 @@ export default ({
             {subheading && <Subheading>{subheading}</Subheading>}
             <Heading>{heading}</Heading>
             <Description>{description}</Description>
-            <Form action={formAction} method={formMethod}>
+            <Form action={formAction} method={formMethod} style={{ 
+              display: 'flex',
+              flexDirection: 'column',
+              maxWidth: '300px',
+              gap: '10px'
+            }}>
+              <Input type="text" name="name" placeholder="Your Name" />
               <Input type="email" name="email" placeholder="Your Email Address" />
+              <TextArea id="message-input" name="message" placeholder="E.g. Details about your event"/>
               <SubmitButton type="submit">{submitButtonText}</SubmitButton>
             </Form>
           </TextContent>

@@ -51,7 +51,7 @@ export default () => {
   return (
     <Container>
       <Content>
-        <FiveColumns>
+        {/* <FiveColumns>
           <Column>
             <ColumnHeading>Main</ColumnHeading>
             <LinkList>
@@ -138,7 +138,7 @@ export default () => {
             </LinkList>
           </Column>
         </FiveColumns>
-        <Divider />
+        <Divider /> */}
         <ThreeColRow>
           <LogoContainer>
             <LogoImg src={LogoImage} />

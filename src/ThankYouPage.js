@@ -27,7 +27,7 @@ const Heading = tw(HeadingBase)`text-center text-primary-900 leading-snug`;
 const Description = tw(
   DescriptionBase
 )`mt-4 text-center lg:text-base text-gray-700 max-w-lg mx-auto lg:mx-0`;
- 
+  
 export default () => {
   /*
    * Using gtag like this because we only want to use Google Analytics when Main Landing Page is rendered

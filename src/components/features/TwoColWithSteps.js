@@ -54,28 +54,29 @@ export default ({
   textOnLeft = true,
   steps = null,
   decoratorBlobCss = null,
+  id = ""
 }) => {
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
 
   const defaultSteps = [
     {
-      heading: "Register",
-      description: "Create an account with us using Google or Facebook."
+      heading: "Contact us",
+      description: "Help us reach out to you by giving your email address"
     },
     {
-      heading: "Download",
-      description: "Browse and Download the template that you like from the marketplace."
+      heading: "Discuss",
+      description: "We will connect with you to obtain your requirements"
     },
     {
-      heading: "Run",
-      description: "Follow the instructions to setup and customize the template to your needs."
+      heading: "Delivered",
+      description: "Get your peoject delivered by the deadline set"
     }
   ];
 
   if (!steps) steps = defaultSteps;
 
   return (
-    <Container>
+    <Container id={id}>
       <TwoColumn>
         <ImageColumn>
           <Image src={imageSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded} />
