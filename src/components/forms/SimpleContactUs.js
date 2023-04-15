@@ -51,33 +51,35 @@ export default ({ id = ""}) => {
         <FormContainer>
           <div tw="mx-auto max-w-4xl">
             <h2>Feel free to <span tw="text-secondary-500">get in touch</span><wbr/> with us.</h2>
-            <form action="#">
+            <form action="https://formspree.io/f/mknaperp" method="POST">
               <TwoColumn>
                 <Column>
                   <InputContainer>
-                    <Label htmlFor="name-input">Your Name</Label>
+                    <Label htmlFor="name-input">Name</Label>
                     <Input
                       id="name-input"
                       type="text"
                       name="name"
                       placeholder="E.g. John Doe"
+                      required
                     />
                   </InputContainer>
                   <InputContainer>
-                    <Label htmlFor="email-input">Your Email Address</Label>
+                    <Label htmlFor="email-input">Email where I can reach you</Label>
                     <Input
                       id="email-input"
                       type="email"
                       name="email"
                       placeholder="E.g. john@mail.com"
+                      required
                     />
                   </InputContainer>
                   <InputContainer tw="flex-1">
-                    <Label htmlFor="name-input">Your Message</Label>
+                    <Label htmlFor="name-input">Project details</Label>
                     <TextArea
                       id="message-input"
                       name="message"
-                      placeholder="E.g. Details about your event"
+                      placeholder="E.g. I want a python console app that.."
                     />
                   </InputContainer>
                 </Column>

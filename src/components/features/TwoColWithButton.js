@@ -48,8 +48,8 @@ export default ({
     </>
   ),
   description = "We have a solid staff of experienced software engineers to do your work for you. When a client contacts us with the question “Can you do my project?” we guarantee the high quality of the work. ",
-  primaryButtonText = "Learn More",
-  primaryButtonUrl = "https://timerse.com",
+  primaryButtonText = "Contact Us",
+  primaryButtonUrl = "#contactus",
   imageSrc = TeamIllustrationSrc,
   buttonRounded = true,
   imageRounded = true,
@@ -75,9 +75,9 @@ export default ({
             <Subheading>{subheading}</Subheading>
             <Heading>{heading}</Heading>
             <Description>{description}</Description>
-            <PrimaryButton buttonRounded={buttonRounded} as="a" href={primaryButtonUrl}>
+            {/* <PrimaryButton buttonRounded={buttonRounded} as="a" href={primaryButtonUrl}>
               {primaryButtonText}
-            </PrimaryButton>
+            </PrimaryButton> */}
           </TextContent>
         </TextColumn>
       </TwoColumn>

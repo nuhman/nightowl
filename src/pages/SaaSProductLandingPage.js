@@ -1,21 +1,15 @@
 import React from "react";
 import tw from "twin.macro";
-import { css } from "styled-components/macro"; //eslint-disable-line
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Hero from "components/hero/TwoColumnWithInput.js";
 import Features from "components/features/ThreeColWithSideImage.js";
 import MainFeature from "components/features/TwoColWithButton.js";
 import MainFeature2 from "components/features/TwoColWithTwoHorizontalFeaturesAndButton.js";
 import FeatureWithSteps from "components/features/TwoColWithSteps.js";
-// import Pricing from "components/pricing/ThreePlans.js";
-// import Testimonial from "components/testimonials/TwoColumnWithImageAndRating.js";
-import ContactUsForm from "components/forms/TwoColContactUsWithIllustration.js";
 import SimpleContactUsForm from "components/forms/SimpleContactUs.js";
-import FAQ from "components/faqs/SingleCol.js";
-import GetStarted from "components/cta/GetStarted";
 import Footer from "components/footers/FiveColumnWithBackground.js";
-import heroScreenshotImageSrc from "images/hero-screenshot-1.png";
-import macHeroScreenshotImageSrc from "images/hero-screenshot-2.png";
+import talentImageSrc from "images/visual-collaboration.png";
+import webDeveloperImageSrc from "images/website-development.png";
 import prototypeIllustrationImageSrc from "images/prototype-illustration.svg";
 import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
 import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg";
@@ -38,9 +32,7 @@ export default () => {
       />
       <MainFeature
         subheading={<Subheading>Quality Work</Subheading>}
-        imageSrc={heroScreenshotImageSrc}
-        imageBorder={true}
-        imageDecoratorBlob={true}
+        imageSrc={webDeveloperImageSrc}
         id="about"
       />
       <FeatureWithSteps
@@ -51,7 +43,7 @@ export default () => {
           </>
         }
         textOnLeft={false}
-        imageSrc={macHeroScreenshotImageSrc}
+        imageSrc={talentImageSrc}
         imageDecoratorBlob={true}
         decoratorBlobCss={tw`xl:w-40 xl:h-40 opacity-15 -translate-x-1/2 left-1/2`}
         id="steps"
