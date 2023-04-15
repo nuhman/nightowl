@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
+import { useForm } from "@formspree/react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 //eslint-disable-next-line
 import { css } from "styled-components/macro";
 
@@ -8,7 +11,7 @@ import Header from "../headers/light.js";
 
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
 import DesignIllustration from "../../images/design-illustration-2.svg";
-import CustomersLogoStripImage from "../../images/customers-logo-strip.png";
+import { ReactComponent as LoaderSrc } from "../../images/Rolling-0.5s-230px - White.svg";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -46,6 +49,18 @@ const CustomersLogoStrip = styled.div`
 `;
 
 export default ({ roundedHeaderButton }) => {
+  const [formState, handleFormSubmit] = useForm("mknaperp");
+  if (formState.succeeded) {
+    toast.success("Thank you for reaching out!", {
+      position: toast.POSITION.BOTTOM_CENTER,
+    });
+  }
+  if (formState.errors && formState.errors.length > 0) {
+    toast.error("Sorry! Please try again.", {
+      position: toast.POSITION.BOTTOM_CENTER,
+    });
+  }
+
   return (
     <>
       <Header roundedHeaderButton={roundedHeaderButton} />
@@ -57,13 +72,43 @@ export default ({ roundedHeaderButton }) => {
             </Heading>
             <Paragraph>
               Need help with your programming assignment?
-              <br />Give us the requirements, sit back and relax - we will get it done for you! 
-              
+              <br />
+              Give us the requirements, sit back and relax - we will get it done
+              for you!
             </Paragraph>
             <Actions>
-              <input type="text" placeholder="Your E-mail Address" />
-              <button>Contact Me</button>
+              <form onSubmit={handleFormSubmit}>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your E-mail Address"
+                  required
+                />
+                <button type="submit" disabled={formState.submitting}>
+                {formState.submitting ? ( 
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        gap: "4px",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <span>Contact Me</span>
+                      <LoaderSrc
+                        width={"30px"}
+                        height={"30px"}
+                        style={{ margin: 0 }}
+                      />
+                    </div>
+                  ) : (
+                    "Contact Me"
+                  )}
+                </button>
+              </form>
             </Actions>
+            <ToastContainer />
             {/* <CustomersLogoStrip>
               <p>Our TRUSTED Customers</p>
               <img src={CustomersLogoStripImage} alt="Our Customers" />
@@ -71,7 +116,11 @@ export default ({ roundedHeaderButton }) => {
           </LeftColumn>
           <RightColumn>
             <IllustrationContainer>
-              <img tw="min-w-0 w-full max-w-lg xl:max-w-3xl" src={DesignIllustration} alt="Design Illustration" />
+              <img
+                tw="min-w-0 w-full max-w-lg xl:max-w-3xl"
+                src={DesignIllustration}
+                alt="Design Illustration"
+              />
             </IllustrationContainer>
           </RightColumn>
         </TwoColumn>
