@@ -47,7 +47,7 @@ export default ({
       Designed & Developed by <span tw="text-primary-500">Tech Professionals.</span>
     </>
   ),
-  description = "We have a solid staff of experienced software engineers to do your work for you. When a client contacts us with the question “Can you do my project?” we guarantee the high quality of the work. ",
+  description = "At ProjectPals, we have a solid staff of experienced software engineers to do your work for you. When a client contacts us with the question “Can you do my project?” we guarantee the high quality of the work. ",
   primaryButtonText = "Contact Us",
   primaryButtonUrl = "#contactus",
   imageSrc = TeamIllustrationSrc,

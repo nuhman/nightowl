@@ -6,7 +6,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 
 import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 
-import logo from "../../images/logo.svg";
+import logo from "../../images/logos/projectpals-logo-3.svg";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 
@@ -38,6 +38,9 @@ export const LogoLink = styled(NavLink)`
 
   img {
     ${tw`w-10 mr-3`}
+  }
+  span {
+    ${tw`font-normal`}
   }
 `;
 
@@ -88,7 +91,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
   const defaultLogoLink = (
     <LogoLink href="/">
       <img src={logo} alt="logo" />
-      Treact
+      PROJECT<span>PALS</span>
     </LogoLink>
   );
 

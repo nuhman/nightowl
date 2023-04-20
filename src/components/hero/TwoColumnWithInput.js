@@ -95,7 +95,7 @@ export default ({ roundedHeaderButton }) => {
                         justifyContent: "center",
                       }}
                     >
-                      <span>Contact Me</span>
+                      <span>Contact Us</span>
                       <LoaderSrc
                         width={"30px"}
                         height={"30px"}
@@ -103,7 +103,7 @@ export default ({ roundedHeaderButton }) => {
                       />
                     </div>
                   ) : (
-                    "Contact Me"
+                    "Contact Us"
                   )}
                 </button>
               </form>
