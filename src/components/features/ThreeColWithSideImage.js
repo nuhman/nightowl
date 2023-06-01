@@ -83,8 +83,8 @@ export default ({
         "Every project we deliver is customized to guarantee its originality.",
     },
     { imageSrc: SupportIconImage, title: "Free revisions", description: "Get upto 3 free revisions for the project if you notice any flaws within it. " },
-    { imageSrc: CustomizeIconImage, title: "Professional Developers", description: "We hire only the best skilled experts who have years of experience in the field to do your work." },
-    { imageSrc: ReliableIconImage, title: "Impeccable Quality", description: "If you need reliable help with your coding assignments, we are the most proper service you can ever come to!" },
+    { imageSrc: CustomizeIconImage, title: "Professional Service", description: "We hire only the best skilled experts who have years of experience in the field to do your work." },
+    { imageSrc: ReliableIconImage, title: "Impeccable Quality", description: "If you need reliable help with your assignments, we are the most proper service you can ever come to!" },
     { imageSrc: FastIconImage, title: "Fast Delivery", description: "Get your projects delivered on time, everytime! Just contact us, and you will get the fastest and the best help." },
     { imageSrc: SimpleIconImage, title: "Right price", description: "We only ask for a sensible price to get the quality you deserve and anticipate." },
   ];

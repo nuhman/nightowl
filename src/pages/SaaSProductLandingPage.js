@@ -29,7 +29,7 @@ export default () => {
             Get high-quality project assistance <HighlightedText>today.</HighlightedText>
           </>
         }
-        description="Entrust your coding tasks to our credible service!"
+        description="Entrust your tasks to our credible service!"
       />
       <MainFeature
         subheading={<Subheading>Quality Work</Subheading>}
@@ -69,7 +69,7 @@ export default () => {
           {
             Icon: BriefcaseIcon,
             title: "Professionalism",
-            description: "We assure you that our projects are designed and developed by professional developers.",
+            description: "We assure you that our projects are designed and developed by professionals.",
             iconContainerCss: tw`bg-red-300 text-red-800`
           }
         ]}

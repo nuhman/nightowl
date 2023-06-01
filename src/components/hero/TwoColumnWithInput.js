@@ -68,10 +68,10 @@ export default ({ roundedHeaderButton }) => {
         <TwoColumn>
           <LeftColumn>
             <Heading>
-              Get your coding projects <span tw="text-primary-500">done.</span>
+              Get your college projects <span tw="text-primary-500">done.</span>
             </Heading>
             <Paragraph>
-              Need help with your programming assignment?
+              Need help with your assignments?
               <br />
               Give us the requirements, sit back and relax - we will get it done
               for you!
@@ -85,7 +85,7 @@ export default ({ roundedHeaderButton }) => {
                   required
                 />
                 <button type="submit" disabled={formState.submitting}>
-                {formState.submitting ? ( 
+                  {formState.submitting ? (
                     <div
                       style={{
                         display: "flex",
